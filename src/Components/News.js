@@ -61,7 +61,7 @@ class News extends React.Component {
 
         }
         else {
-            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=0b03c2b7fc9b405c9a6850119cbb5574&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
             let data = await fetch(url);
             let parsedData = await data.json();
             console.log(parsedData);
@@ -72,7 +72,7 @@ class News extends React.Component {
         }
     }
     handlePrevClick = async () => {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=0b03c2b7fc9b405c9a6850119cbb5574&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${process.env.API_KEY}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
         let data = await fetch(url);
         let parsedData = await data.json();
         console.log(parsedData);
