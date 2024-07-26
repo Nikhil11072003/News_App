@@ -1,0 +1,16 @@
+.text{
+    font-size: 2rem;
+    color: rgb(88, 255, 171);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.LoginBtn{
+    width: 100px;
+    height: 100px;
+}
+
+.btn{
+    align-items: center;
+}
+
